@@ -125,7 +125,7 @@ nav ul li:last-child a {
 	margin: 5px auto;
 }
 
-#feature h2, a {
+#feature h2, #feature a {
 	display: inline-block;
 	text-align: center;
 	vertical-align: middle;
@@ -269,8 +269,15 @@ input[type="email"] {
 
 }
 .panel ul li {
+	color: #004f90;
 	font-size: 10pt;
 	/*padding-right: 1em; */
+}
+
+.panel ul li a {
+	display: list-item;
+	text-decoration: none;
+	color: #004f90;
 }
 
 .panel img {
@@ -284,13 +291,13 @@ input[type="email"] {
 .tabbox {
 }
 
+/* I would probaby be better doing this with a
+	<button> element with text elements inside
+	rather than trying to tart up an <a>
+ */
 .lead-button {
 	color: #fff;
 	border: 0;
-	box-sizing:border-box;
-    -moz-box-sizing:border-box; /* Firefox */
-    -webkit-box-sizing:border-box; /* Safari */
-	margin: 0 15px;
 	border-radius: 50% / 100%;
 	background: #427dad; /* Old browsers */
 	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
@@ -302,6 +309,12 @@ input[type="email"] {
 	background: -ms-linear-gradient(top,  #427dad 0%,#002e6e 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  #427dad 0%,#002e6e 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#427dad', endColorstr='#002e6e',GradientType=0 ); /* IE6-8 */
+}
+
+.lead-button p {
+	color: #fff;
+	font-size: 14pt;
+	margin: 0 20px;
 }
 
 .lead-button:link {
