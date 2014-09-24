@@ -19,6 +19,10 @@ body {
 	background: linear-gradient(to bottom,  #f1f5d0 0%,#e3eba1 100%); /* W3C */
 }
 
+.float-right {
+	float: right;
+}
+
 body {
     font: normal 1.25em/1.5 Arial, sans-serif;
 }
@@ -40,7 +44,8 @@ h1, h2, h3 {
 .container {
 	background: #ffffff;
 	border-radius: 10px 10px 0 0;
-	padding: 1em 1em 0 1em;
+	padding: 1em;
+	height: 100%;
 }
 
 nav {
@@ -106,6 +111,7 @@ nav ul li:last-child a {
 #feature {
 	border-radius: 7px;
 	background: #b8cc33;
+	text-align: center;
 }
 
 #feature img {
@@ -115,6 +121,23 @@ nav ul li:last-child a {
 
 #feature h2 {
 	color: #fff;
+	font-size: 18pt;
+	margin: 5px auto;
+}
+
+#feature h2, a {
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+}
+
+main h3 {
+	font-size: 14pt;
+}
+
+main p {
+	font-size: 10pt;
+	color: #999999;
 }
 
 #sidebar {
@@ -127,22 +150,35 @@ nav ul li:last-child a {
 }
 
 main {
-	width: 66% ;
+	width: 66%;
+	height: 100%
 }
 /*width: auto !important; */
 aside {
-	padding-top: 2em;
+	display: inline-block;
+		margin-top: 1em;
+	/*padding-top: 2em;*/
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+
 }
 
 aside p, aside li{
 	color: #999999;
 	font-size: 12px;
 }
+
+aside li + li {
+	margin: 0.5em 0;
+}
 aside h3 {
 	font-size: 15px;
+	margin-top: 1em;
 }
 
 form {
+	min-height: 253px;
 	border: 1px solid #b8cc33;
 	border-radius: 6px;
 	float: right;
@@ -151,10 +187,28 @@ form {
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
 	clear:right;
+
+	background: #e5eeab; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U1ZWVhYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjOGQ2NDQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #e5eeab 0%, #c8d644 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e5eeab), color-stop(100%,#c8d644)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #e5eeab 0%,#c8d644 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #e5eeab 0%,#c8d644 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #e5eeab 0%,#c8d644 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #e5eeab 0%,#c8d644 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5eeab', endColorstr='#c8d644',GradientType=0 ); /* IE6-8 */
+
+}
+
+form h3 {
+	font-size: 14pt;
+	margin: 0 0;
 }
 
 form p {
 	color: #666666;
+	font-size: 12pt;
 }
 
 input[type="email"] {
@@ -163,6 +217,14 @@ input[type="email"] {
 	height: 2em;
 	border: 1px solid #dddddd;
 	font-size: 15px;
+	padding-left:1em;
+	-webkit-box-shadow: 0 0 7px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0 0 7px rgba(0,0,0,0.75);
+	box-shadow: 0 0 7px rgba(0,0,0,0.75);
+
+	box-sizing:border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
 }
 
 /* Tabs */
@@ -174,7 +236,6 @@ input[type="email"] {
 .tabs {
     margin: 0;
     padding: 0;
-    border-bottom: 1px solid #EEE;
 }
 .tabs > li {
     display: inline;
@@ -195,12 +256,64 @@ input[type="email"] {
 }
 
 .panel {
-	min-height: 250px;
+	background: #f5f8da;
+	-webkit-border-radius: 0 15px 15px 15px;
+	-moz-border-radius: 0 15px 15px 15px;
+	border-radius: 0 15px 15px 15px;
+	min-height: 220px;
+	border: 10px solid #b8cc33;
+	padding: 1em;
+}
+.panel ul {
+	position: relative;
+
+}
+.panel ul li {
+	font-size: 10pt;
+	/*padding-right: 1em; */
+}
+
+.panel img {
+	max-width: 40%;
+	float: left;
+	margin-right: 1.5em;
+	border-radius: 6px;
+	clear: none;
 }
 
 .tabbox {
-	min-width: 66%;
+}
 
+.lead-button {
+	color: #fff;
+	border: 0;
+	box-sizing:border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
+	margin: 0 15px;
+	border-radius: 50% / 100%;
+	background: #427dad; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQyN2RhZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDJlNmUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #427dad 0%, #002e6e 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#427dad), color-stop(100%,#002e6e)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #427dad 0%,#002e6e 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #427dad 0%,#002e6e 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #427dad 0%,#002e6e 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #427dad 0%,#002e6e 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#427dad', endColorstr='#002e6e',GradientType=0 ); /* IE6-8 */
+}
+
+.lead-button:link {
+	text-decoration: none;
+}
+
+.lead-button:visited {
+    text-decoration: none;
+}
+
+.lead-button:hover {
+    text-decoration: none;
 }
 
 footer {
