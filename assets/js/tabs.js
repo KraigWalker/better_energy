@@ -1,4 +1,14 @@
-    /**
+/**
+	File:		eqtr_main.css
+	Created:	***24th September 2014***
+	Author:		***Kraig Walker***
+
+	Notes:
+			Need to make the whole <li> the 'is-selected' class
+*/
+
+
+    		* give the whole <li> element the 'is-selected' css class.
      * Tabs
      * @description Keyboard and screen reader accessible tabs.
      * @constructor
